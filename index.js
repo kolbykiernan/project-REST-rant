@@ -8,7 +8,7 @@ app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 
 
-//<------------connecting our router for places-------------------->//
+//<------------connecting our router for places.js-------------------->//
 app.use('/places', require('./controllers/places'))
 
 //<------------Home page?-------------------->//
@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 
 //<------------Adding 404 page route------------->//
 app.get('*', (req, res) => {
-    res.status(404).send('<h1>404 Page</h1>')
+    res.render('error404')
 })
 
 app.listen(process.env.PORT)
