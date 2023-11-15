@@ -2,6 +2,7 @@
 
 const React = require('react')
 
+
 //<---Create function that will allow us to pass html as argument instead of rewriting. JSX--------->//
 function Def (html) {
     return (

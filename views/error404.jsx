@@ -3,6 +3,7 @@
 const React = require('react')
 const Def = require('./default')
 
+//<-----------creating JSX function----------------->//
 function error404(){
     return (
         <Def>
