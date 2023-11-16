@@ -11,6 +11,12 @@ function home (){
     <Def>
         <main>
             <h1>HOME</h1>
+            <div>
+                <img src="/images/Kbbq.jpg" alt="korean bbq" width ="500px"/> 
+                <div>
+                    Photo by <a href="https://unsplash.com/@vanthanh2608"> Van Thanh</a> on <a href="https://unsplash.com/photos/food-on-cooking-pot-dTlYGkWaZXo"> Unsplash</a>
+                </div>
+            </div>
             <a href="/places">
                 <button className="btn-primary">Places Page</button>
             </a>
