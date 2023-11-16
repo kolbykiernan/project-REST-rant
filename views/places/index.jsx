@@ -8,11 +8,11 @@ function index(data){
         return (
             <div className="col-sm-6">
                 <h2>{place.name}</h2>
-                <p className="text-center">
+                <p>
                     {place.cuisines}
                 </p>
                 <img src ={place.pic} alt = {place.name}/>
-                <p className="text-center">
+                <p>
                     Located in {place.city}, {place.state}
                 </p>
             </div>
@@ -21,7 +21,7 @@ function index(data){
     return (
         <Def>
             <main>
-                <h1>PLACES to Rant or RAve About</h1>
+                <h1>PLACES to Rant or Rave About</h1>
                 <div className="row">
                     {placesFormatted}
                 </div>
