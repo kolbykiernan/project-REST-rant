@@ -8,6 +8,9 @@ app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 app.use(express.static('public'))
 
+//<------body parser to decrypt encrypted data--------------->//
+app.use(express.urlencoded({ extended: true }))
+
 //<------------connecting our router for places.js-------------------->//
 app.use('/places', require('./controllers/places'))
 
