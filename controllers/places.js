@@ -1,6 +1,10 @@
 //<-------------------creating a router------------------->//
 const router = require('express').Router()
 
+router.get('/new', (req, res) => {
+    res.render('places/new')
+  })
+  
 
 
 //<------------ GETting places---------------------->//
