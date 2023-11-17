@@ -12,9 +12,9 @@ function home (){
         <main>
             <h1>HOME</h1>
             <div>
-                <img src="/images/Kbbq.jpg" alt="korean bbq" width ="500px"/> 
+                <img src="/images/fruity-donuts.jpg" alt="fruity donuts" width ="500px"/> 
                 <div>
-                    Photo by <a href="https://unsplash.com/@vanthanh2608"> Van Thanh</a> on <a href="https://unsplash.com/photos/food-on-cooking-pot-dTlYGkWaZXo"> Unsplash</a>
+                    Photo by <a href="https://unsplash.com/@brookelark"> Brooke Lark</a> on <a href="https://unsplash.com/photos/assorted-donuts-top-of-white-area-V4MBq8kue3U"> Unsplash</a>
                 </div>
             </div>
             <a href="/places">

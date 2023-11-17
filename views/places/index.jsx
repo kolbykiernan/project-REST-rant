@@ -8,6 +8,9 @@ function index(data){
         return (
             <div className="col-sm-6">
                 <h2>{place.name}</h2>
+                <a href={`/places/${index}`}>
+                    {place.name}
+                </a>
                 <p>
                     {place.cuisines}
                 </p>
