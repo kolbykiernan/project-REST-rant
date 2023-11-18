@@ -17,9 +17,6 @@ function home (){
                     Photo by <a href="https://unsplash.com/@brookelark"> Brooke Lark</a> on <a href="https://unsplash.com/photos/assorted-donuts-top-of-white-area-V4MBq8kue3U"> Unsplash</a>
                 </div>
             </div>
-            <a href="/places">
-                <button className="btn-primary">Places Page</button>
-            </a>
         </main>
     </Def>
     )

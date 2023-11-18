@@ -7,6 +7,14 @@ h1 {
     color: rgb(247, 211, 140);
   }
   
+h2{
+  color: lightblue
+}
+
+h4{
+  font-size: .7em;
+}
+  
   button{
     background-color: rgb(247, 211, 140);
   }
@@ -46,3 +54,5 @@ main {
   margin-left: 20px;
   background-color: white;
 }
+
+

@@ -5,10 +5,20 @@ function show (data) {
     return (
         <Def>
           <main>
-            <h1>{ data.place.name }</h1>
-            <div>
-                <h2>Rating</h2>
-                <h4>Currently unrated</h4>
+          <div className="row">
+            <div className="col-sm-6">
+                <img src ={data.place.pic} />
+            </div>
+            <div className="col-sm-6">
+                <div>
+                    <h1>{ data.place.name }</h1>
+                    <h2>Rating</h2>
+                    <h4>Currently unrated</h4>
+                </div>
+                <div>
+                    <h2>Description</h2>
+                    <h4>Located in {data.place.city}, {data.place.state} and serving {data.place.cuisines}</h4>
+                </div>
             </div>
             <div>
                 <h2>Comments</h2>
@@ -20,6 +30,7 @@ function show (data) {
                     Delete
                 </button>
             </form>
+            </div>
           </main>
         </Def>
     )
