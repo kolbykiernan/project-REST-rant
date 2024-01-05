@@ -54,3 +54,10 @@ main {
 }
 
 
+/* .starRating{
+  display: none;
+} */
+
+.star{
+  cursor:pointer
+}

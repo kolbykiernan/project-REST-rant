@@ -113,8 +113,9 @@ router.get('/:id/edit', (req, res) => {
 //     res.send('GET /places/:id/rant/:rantId stub')
 // })
 
-router.post('/:id/comment', (req, res) => {
+router.post('/:id/', (req, res) => {
   console.log(req.body)
+  if (req.body.author === '') {req.body.author = undefined}
   req.body.rant = req.body.rant ? true : false
   db.Place.findById(req.params.id)
   .then(place => {
@@ -125,15 +126,17 @@ router.post('/:id/comment', (req, res) => {
           .then(() =>{
             res.redirect(`/places/${req.params.id}`)
           })
-      })
+          .catch(err => {
+            res.render('error404')
+          })
+        })
       .catch(err => {
         res.render('error404')
       })
-  })
+    })
   .catch(err => {
     res.render('error404')
   })
-  res.send('GET /places/:id/comment stub')
 })
 
 
