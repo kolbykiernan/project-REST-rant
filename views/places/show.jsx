@@ -13,7 +13,23 @@ function show (data) {
             No comments yet!
         </h3>
     )
+
+    let rating = (
+        <h3 className='inactive'>
+            Not yet rated
+        </h3>
+    )
+
+
     if (data.place.comments.length){
+        let sumOfRatings = data.place.comments.reduce((tot, c) =>{
+            return tot + c.stars
+        }, 0)
+        let averageRating = sumOfRatings / data.place.comments.length
+        rating =(
+            <h3>{Math.round(averageRating)} stars</h3>
+        )
+
         comments = data.place.comments.map( c => {
             return (
                 <div className = "border">
@@ -27,11 +43,7 @@ function show (data) {
             )
         })
    
-    // function calculateRating(rating){
-    //     let numberOfRatings = comments.length
-    //     let sumOfRatings = c.stars.length
-    //     let rating = numberOfRatings/sumOfRatings
-    // }
+   
 
     }
 
@@ -48,7 +60,7 @@ function show (data) {
                     <div>
                         <h1>{ data.place.name }</h1>
                         <h2>Rating</h2>
-                        <h4> {}</h4>
+                        <h4> {rating}</h4>
                     </div>
                     <div>
                         <h2>Description</h2>
@@ -97,10 +109,7 @@ function show (data) {
                                 name="stars"
                                 className="form-control"
                             />
-                            </div>
-                            
-                                       
-            
+                            </div>        
                         <div className="form-group col-sm-2">
                             <label htmlFor="rant">Rant</label>
                             <input className="" type="checkbox" id="rant" name="rant" />
