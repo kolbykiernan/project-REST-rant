@@ -107,12 +107,6 @@ router.get('/:id/edit', (req, res) => {
 
 
 
-
-
-// router.delete('/:id/rant/:rantId', (req, res) => {
-//     res.send('GET /places/:id/rant/:rantId stub')
-// })
-
 router.post('/:id/comment', (req, res) => {
   if (req.body.rant){
     req.body.rant = true
@@ -138,5 +132,17 @@ router.post('/:id/comment', (req, res) => {
     })
 })
 
+
+//<-------lets user delete apage and returns them to index--------->//
+router.delete('/:id/comment/:commentId', (req, res) => {
+  db.Comment.findByIdAndDelete(req.params.commentId)
+  .then(() => {
+    res.redirect(`/places/${req.params.id}`)
+  })
+  .catch(err => {
+    console.log('err', err)
+    res.render('error404')
+  })
+})
 
 module.exports = router
