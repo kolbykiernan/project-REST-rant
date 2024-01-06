@@ -1,5 +1,6 @@
 img{
     justify-content: center;
+    
 }
 
 h1 {
@@ -11,8 +12,22 @@ h2{
   color: lightblue
 }
 
+h3{
+  font-size: 1.1em;
+}
 
+h4{
+  font-size: .8em;
+}
   
+.placelink{
+  text-decoration: none
+}
+
+.placelink h2:hover{
+  opacity: .7;
+}
+
   button{
     background-color: rgb(247, 211, 140);
   }

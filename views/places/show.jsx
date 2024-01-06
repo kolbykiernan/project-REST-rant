@@ -8,9 +8,6 @@ const Def = require('../default')
 
 function show (data) {
     
-    const [rating, setRating] = useState(null);
-    const [hover, setHover] = useState(null);
-
     let comments = (
         <h3 className= "inactive">
             No comments yet!
@@ -29,7 +26,15 @@ function show (data) {
                 </div>
             )
         })
+   
+    // function calculateRating(rating){
+    //     let numberOfRatings = comments.length
+    //     let sumOfRatings = c.stars.length
+    //     let rating = numberOfRatings/sumOfRatings
+    // }
+
     }
+
     return (
         <Def>
             <main>
@@ -43,7 +48,7 @@ function show (data) {
                     <div>
                         <h1>{ data.place.name }</h1>
                         <h2>Rating</h2>
-                        <h4>Currently unrated</h4>
+                        <h4> {}</h4>
                     </div>
                     <div>
                         <h2>Description</h2>
@@ -69,7 +74,7 @@ function show (data) {
                     </div>
                 </div>
                 <h1>Leave a Rant or Rave</h1>
-                <form method="POST" action={`/places/${data.place.id}`}>    
+                <form method="POST" action={`/places/${data.place.id}/comment`}>    
                     <div className='row'>
                         <div className="form-group col-sm-12">
                             <label htmlFor="content">Content</label>
@@ -82,29 +87,20 @@ function show (data) {
                             <input className="form-control" type="text" id="author" name="author" required />
                         </div>
                         <div className="form-group col-sm-4">
-                            {[...Array(5)].map((star, index) => {
-                            const currentRating = index + 1;
-                                return (
-                                <label>
-                                    <input 
-                                        className='starRating'
-                                        type="radio" 
-                                        name = "rating" 
-                                        value = {currentRating} 
-                                        onClick={() => setRating(currentRating)}
-                                    />
-                                    <FaStar 
-                                        className='star' 
-                                        size = {50} 
-                                        color={currentRating <= (hover || rating) ? "#ffc107" : "#e4e5e9" }
-                                        onMouseEnter={() => setHover(currentRating)}
-                                        onMouseLeave={() => setHover(null)}
-                                    />
-                                </label>
-                                ) 
-                            })}
-                            {/* <input className="" type="range" min="0" max="5" id="starRating" name="starRating" step=".5" required/> */}
-                        </div>
+                            <label htmlFor="stars">Star Rating</label>
+                            <input
+                                type="range"
+                                step="0.5"
+                                min="1"
+                                max="5"
+                                id="stars"
+                                name="stars"
+                                className="form-control"
+                            />
+                            </div>
+                            
+                                       
+            
                         <div className="form-group col-sm-2">
                             <label htmlFor="rant">Rant</label>
                             <input className="" type="checkbox" id="rant" name="rant" />
