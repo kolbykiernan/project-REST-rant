@@ -59,7 +59,8 @@ function show (data) {
             <main>
             <div className="row">
                 <div className="col-sm-6">
-                        <img src ={data.place.pic} />
+                    <br></br> 
+                        <img width ="300" height ="300" src ={data.place.pic} />
                         <h3>Located in {data.place.city}, {data.place.state}</h3>
                     
                 </div>
