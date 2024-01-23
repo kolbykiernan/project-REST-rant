@@ -13,7 +13,7 @@ REST-Rant is an app where users can rate and review restaurants. The project was
 
 ## Installation
 
-No installation necessary. App is deployed and available at rest-rant-27u0.onrender.com
+No installation necessary. App is deployed and available at [rest-rant-27u0.onrender.com](https://rest-rant-27u0.onrender.com/)
 
 ## Usage
 Users are able to choose restaurants, view basic info and ratings, add their own ratings and comments. They can also add restaurants, and fill out information such as name, cuisine type, when it was founded, and add pictures. Once a restaurant is created, they can edit and delete this restaurant information.
