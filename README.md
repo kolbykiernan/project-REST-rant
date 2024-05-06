@@ -19,22 +19,13 @@ To install REST-rant, follow these steps:
 
 1. Clone this repository to your local machine:
 
-```shell
-git clone https://github.com/kolbykiernan/project-REST-rant.git
-    * Navigate to the project directory: cd project-REST-rant   
-2. Install dependencies by running:
 
-```shell
-npm install express method-override express-react-views   
-3. Run the backend server:
-
-```shell
-node index.js   
-4. Open a new terminal window/tab in your browser.  
-5. Type
-
-```shell
-[http://localhost:2222/](http://localhost:2222/) in the URL to view locally.  
+git clone ```https://github.com/kolbykiernan/project-REST-rant.git```   
+    * Navigate to the project directory: cd project-REST-rant     
+2. Install dependencies by running: ```npm install express method-override express-react-views```      
+3. Run the backend server: ```node index.js```        
+4. Open a new terminal window/tab in your browser.   
+5. Type ```[http://localhost:2222/](http://localhost:2222/)``` in the URL to view locally.   
 
 ## Usage
 Users are able to choose restaurants, view basic info and ratings, add their own ratings and comments. They can also add restaurants, and fill out information such as name, cuisine type, when it was founded, and add pictures. Once a restaurant is created, they can edit and delete this restaurant information.
