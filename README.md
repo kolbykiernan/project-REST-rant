@@ -18,7 +18,7 @@ You can access the deployed version at [rest-rant-27u0.onrender.com](https://res
 To install REST-rant, follow these steps:
 
 1. Clone this repository to your local machine: git clone ```https://github.com/kolbykiernan/project-REST-rant.git```   
-    * Navigate to the project directory: cd project-REST-rant     
+    * Navigate to the project directory: ```cd project-REST-rant```        
 2. Install dependencies by running: ```npm install express method-override express-react-views```      
 3. Run the backend server: ```node index.js```        
 4. Open a new terminal window/tab in your browser.   
